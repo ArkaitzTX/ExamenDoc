@@ -2,14 +2,14 @@
 
 
 $hostDB = 'MySqlArkaitzLe';
-$nombreDB = 'examen';
+$nombreDB = 'usuario';
 $usuarioDB = 'root';
 $contrasenyaDB = 'admin1234';
 
 $hostPDO = "mysql:host=$hostDB;dbname=$nombreDB;";
 $miPDO = new PDO($hostPDO, $usuarioDB, $contrasenyaDB);
 
-$miConsulta = $miPDO->prepare('SELECT * FROM libros;');
+$miConsulta = $miPDO->prepare('SELECT * FROM usuario;');
 $miConsulta->execute();
 
 ?>
@@ -19,7 +19,7 @@ $miConsulta->execute();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Examen</title>
+    <title>Usuario</title>
     <style>
         table {
             border-collapse: collapse;
